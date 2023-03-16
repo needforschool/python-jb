@@ -1,0 +1,43 @@
+{% set system_info_list = system_info.to_json_list() %}
+{% set cpu_info_list = system_info.cpu_info.to_json_list() %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Partie 3</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename= 'css/reset.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename= 'css/styles.css') }}">
+</head>
+
+<body>
+  <main id="page">
+    <h1 id="title">Partie 3</h1>
+
+    <h2 class="section-title">Informations système</h2>
+    <div class="cards">
+      {% for item in system_info_list %}
+        <div class="card">
+          <h5 class="card-header">
+            {{ item.label }}
+          </h5>
+          <p class="card-value">{{ item.value }}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+    <h2 class="section-title">Informations CPU</h2>
+    <div class="cards">
+      {% for item in cpu_info_list %}
+        <div class="card">
+          <h5 class="card-header">
+            {{ item.label }}
+          </h5>
+          <p class="card-value">{{ item.value }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </main>
+</body>
+</html>

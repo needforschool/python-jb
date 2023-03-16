@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  background-color: rgb(23 23 23);
+  color: #ffffff;
+}
+
+#page {
+  padding: 4rem 1.5rem 10rem 1.5rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card {
+  grid-column: span 2 / span 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffffff;
+  color: rgb(23 23 23);
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.card-header {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
