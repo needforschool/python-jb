@@ -1,4 +1,4 @@
-import random
+from quote import Quote
 
 quotes = [
     "Clic baw, ah les b**** ils ont fumé Pop Simoké.",
@@ -10,7 +10,11 @@ quotes = [
     "C'est pas parce que voilà que t'as capté et au final c'est toujours la même chose donc bon c'est tout."
 ]
 
-# Choose a random quote from the list
-random_quote = random.choice(quotes)
+# Create an instance of the class
+quote = Quote(quotes)
 
+# Get a random quote
+random_quote = quote.get_random_quote()
+
+# Print the random quote
 print(random_quote)
