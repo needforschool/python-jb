@@ -1,16 +1,19 @@
 import json
+from movie import Movie
 
-movie = {
-    "title": "La reine des neiges",
-    "author": "Disney",
-    "year": 2013,
-    "characters": [
+# Create a movie
+movie = Movie(
+    "La reine des neiges",
+    "Disney",
+    2013,
+    [
         "Anna",
         "Elsa",
         "Kristoff",
         "Olaf",
         "Sven"
     ]
-}
+)
 
-print(json.dumps(movie))
+# Print the movie
+print(movie.to_json())
