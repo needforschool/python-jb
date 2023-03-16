@@ -19,25 +19,12 @@ In this repository we have 3 python projects:
 
 ## Getting Started
 
-### Prerequisites
-
-For this project you have to install dependencies that are referenced in the requirements.txt file:
-
-	* flask 2.2.3
-	* py-cpuinfo 9.0.0
-
 ### Installation
 
 1. Clone the repo
 
 ```sh
 git clone https://github.com/needforschool/python-jb
-```
-
-2. Install dependencies with `pip`
-
-```sh
-pip install -r requirements.txt
 ```
 
 ## Usage
@@ -70,7 +57,13 @@ cd ./part2
 python main.py
 ```
 
-### Part 3 (Need the installation of the dependencies [here](#installation))
+### Part 3
+
+
+For this part you have to install dependencies that are referenced in the requirements.txt file:
+
+	* flask 2.2.3
+	* py-cpuinfo 9.0.0
 
 1. Go to the `./part3` folder
 
@@ -78,7 +71,13 @@ python main.py
 cd ./part3
 ```
 
-2. Run the script
+2. Install dependencies with `pip`
+
+```sh
+pip install -r requirements.txt
+```
+
+3. Run the script
 
 ```sh
 flask run
