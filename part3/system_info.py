@@ -16,6 +16,9 @@ class SystemInfo:
         cpu_info (str): The CPU-related informations.
         ip_address (str): The IP address of the computer.
         username (str): The current username.
+
+    Methods:
+        to_json_list(): Returns a JSON representation of the SystemInfo instance.
     """
 
     def __init__(self) -> None :
@@ -116,10 +119,18 @@ class CPUInfo:
         processor (str): The name of the processor.
         hz_advertized (str): The advertised frequency of the processor.
         hz_actual (str): The actual frequency of the processor.
+
+    Methods:
+        to_json_list(): Returns a JSON representation of the CPUInfo instance.
     """
 
     def __init__(self, cpu_info) -> None :
-        """Initializes the CPUInfo instance and retrieves CPU information."""
+        """
+        Initializes the CPUInfo instance and retrieves CPU information.
+        
+        Args:
+            cpu_info (str): Information about the CPU of the computer.
+        """
         self._python_version = cpu_info["python_version"]
         self._arch = cpu_info["arch"]
         self._processor = cpu_info["brand_raw"]
